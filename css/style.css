@@ -6,9 +6,42 @@
 	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 40px;
+	margin-top: 42px;
 }
 .well {
-	background-color: #286090;
-	border-color: #204d74;
+	background-color: #7c4e2f !important;
+}
+
+.container {
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+	font-size: 16px;
+	
+}
+
+#top {
+	text-align: center;
+	font-weight: bold;
+}
+
+body{
+	background: url('http://lureofmac.com/wp-content/uploads/2015/12/mackey1-1024x373.jpg') no-repeat;
+	background-attachment: fixed;
+	background-size: 60% 40%;
+	background-position: 52% 100%;
+}
+
+#list {
+	background: url('https://www.lidac.com/images/2-individual_employee_login.jpg') no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+}
+
+.content {
+	background-color: rgba(255, 255, 255, 0.6);
+	
+}
+
+.content h1 {
+	padding-top: 20px;
 }

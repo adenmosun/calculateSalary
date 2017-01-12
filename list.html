@@ -7,16 +7,16 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="js/collaborate.js"></script>
     <script src="js/login.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <script>
         var chk = checkLogin("grp2Login")
         if(!chk){
             window.location.href = "index.html";
         }
-
     </script>
 </head>
 
-<body>
+<body id ='list'>
 <div class="container">
     <header>
         <nav clas="navbar-nav">
@@ -60,7 +60,6 @@
                                 "" + "<td>"+employees[key].Salary+"</td>" +
                                 "</tr>");
                         }
-
                     </script>
 
                 </table>
