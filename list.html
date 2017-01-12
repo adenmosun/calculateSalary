@@ -3,9 +3,17 @@
 <html>
 <head>
     <title>Employee List</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="js/collaborate.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        var chk = checkCookie("grp2Login")
+        if(!chk){
+            window.location.href = "index.html";
+        }
+
+    </script>
 </head>
 
 <body>
@@ -20,8 +28,13 @@
         <h1 class="text-center">Employee List</h1>
 
         <div class="row">
+            <a href="" onclick="logout()" class="pull-right" style="margin-right: 170px"> Logout </a>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
             <aside>
-                <a href="index.html" class="btn btn-primary pull-right" style="margin-right: 170px">Add
+                <a href="createEmployee.html" class="btn btn-primary pull-right" style="margin-right: 170px">Add
                     Employee</a>
             </aside>
         </div>

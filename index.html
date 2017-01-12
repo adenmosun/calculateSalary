@@ -1,75 +1,35 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Add Employee</title>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="js/collaborate.js"></script>
+	<title>Sign in Portal</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/signinPortal.css"/>
+	<script src="js/login.js"></script>
 </head>
-
 <body>
-	<div class="container">
-		<header class="text-center">
-			<p style="margin-top: 20px; margin-bottom: -10px;color: red;" id="h-error"></p>
-		</header>
-
-		<section class="well" id="employee-detail">
-			<h1>Add new Employee</h1>
-
-			<!--<form>-->
-				<div class="form-group">
-					<label for="name">NAME</label>
-					<input type="text" class="form-control" name="name" id="name">
-				</div>
-				<div class="form-group">
-					<label for="level">LEVEL</label>
-					<select name="level" id="level" class="form-control">
-					  <option value="" selected>Enter your Management Level</option>
-					  <option value="1">Intern</option> 
-					  <option value="2">Associates</option>
-					  <option value="3">Managers</option>
-					  <option value="4">Executives</option>
-					  <option value="5">Director</option>
-					</select>
-				</div>
-
-				<div class="form-group">
-					<label for="years">YEARS OF EXPERIENCE</label>
-					<select name="years" id="years" class="form-control">
-						<option value="" selected>Enter your Years of Experience</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-						<option value="13">13</option>
-						<option value="14">14</option>
-						<option value="15">15</option>
-					</select>
-				</div>
-
-				<div class="form-group">
-					<button class="btn btn-success form-control" onclick="addEmployee()">Submit</button>
-				</div>	
-			<!--</form>-->
-
-		</section>
-
-	</div><!--container-->
-
-	<footer>
-	</footer>
-	</div>
-	
-
+  <div class = "contain">
+  	  <img src="http://www.campuscare.ca/images/btn_login.png" alt="Mountain View" style="padding-top: 20px;width :20%;height:30%;" id = logo>
+  	  
+	  	<div class="row text-center" id="h-error" style="margin-top: 20px; margin-bottom: -10px;color: red;">
+		</div>
+	    <div class="row text-center" >
+	    	<section class='gawd'>
+				<label></label>
+				<input type="username" name="username" id="username" class = "form-control" placeholder="Username">
+			</section>
+	    </div>
+	    <div class="row text-center" >
+	    	<section class='gawd'>
+					<label></label>
+					<input type="password" name="password" id="password" class = "form-control" placeholder="password">
+			</section>
+	    </div>
+	    <div class="row text-center" >
+	    	<div class = "gawd">
+		    	<input  class = "form-control btn btn-primary" value="Login" onclick="login()">
+		       	<!--<input class = "form-control" value = "Forgot Password?">-->
+	    	</div>
+	    </div>
+  </div>
 </body>
-
 </html>

@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Add Employee</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="js/collaborate.js"></script>
+	<script src="js/login.js"></script>
+	<script>
+		var chk = checkCookie("grp2Login")
+		if(!chk){
+			window.location.href = "index.html";
+		}
+
+	</script>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="row">
+			<a href="" onclick="logout()" class="pull-right" style="margin-right: 170px; margin-top: 20px;"> Logout </a>
+		</div>
+		<header class="text-center">
+			<p style="margin-top: 20px; margin-bottom: -10px;color: red;" id="h-error"></p>
+		</header>
+
+		<section class="well" id="employee-detail">
+			<h1>Add new Employee</h1>
+
+			<!--<form>-->
+				<div class="form-group">
+					<label for="name">NAME</label>
+					<input type="text" class="form-control" name="name" id="name">
+				</div>
+				<div class="form-group">
+					<label for="level">LEVEL</label>
+					<select name="level" id="level" class="form-control">
+					  <option value="" selected>Enter your Management Level</option>
+					  <option value="1">Intern</option> 
+					  <option value="2">Associates</option>
+					  <option value="3">Managers</option>
+					  <option value="4">Executives</option>
+					  <option value="5">Director</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="years">YEARS OF EXPERIENCE</label>
+					<select name="years" id="years" class="form-control">
+						<option value="" selected>Enter your Years of Experience</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-success form-control" onclick="addEmployee()">Submit</button>
+				</div>	
+			<!--</form>-->
+
+		</section>
+
+	</div><!--container-->
+
+	<footer>
+	</footer>
+	</div>
+	
+
+</body>
+
+</html>
