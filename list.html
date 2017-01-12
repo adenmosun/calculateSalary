@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Employee List</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/collaborate.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <nav clas="navbar-nav">
+        </nav>
+
+    </header>
+
+    <div class="content">
+        <h1 class="text-center">Employee List</h1>
+
+        <div class="row">
+            <aside>
+                <a href="index.html" class="btn btn-primary pull-right" style="margin-right: 170px">Add
+                    Employee</a>
+            </aside>
+        </div>
+
+        <div class="row" id="list-title">
+            <div class="col-md-8 col-md-offset-2">
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Level</th>
+                        <th>Years</th>
+                        <th>Salary</th>
+                    </tr>
+
+                    <script>
+                        var storage = localStorage.getItem("employee");
+                        var employees = JSON.parse(storage);
+                        for (var key in employees) {
+                            document.write("<tr>" +
+                                "" + "<td>"+employees[key].Name+"</td>" +
+                                "" + "<td>"+employees[key].Level_name+"</td>" +
+                                "" + "<td>"+employees[key].Years+"</td>" +
+                                "" + "<td>"+employees[key].Salary+"</td>" +
+                                "</tr>");
+                        }
+
+                    </script>
+
+                </table>
+            </div>
+
+        </div>
+
+
+    </div><!--container-->
+
+    <footer>
+    </footer>
+</div>
+
+
+</body>
+
+</html>

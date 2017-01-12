@@ -1,0 +1,13 @@
+#list-title {
+	margin-top: 20px;
+}
+#employee-detail {
+	width: 400px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+.well {
+	background-color: #7c4e2f !important;
+}
