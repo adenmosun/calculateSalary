@@ -1,27 +1,13 @@
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+function setLoginId(cname) {
+    localStorage.setItem(cname, "1");
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
+function getLoginId(cname) {
+    return localStorage.getItem(cname);
 }
 
-function checkCookie(name) {
-    var user = getCookie(name);
+function checkLogin(name) {
+    var user = getLoginId(name);
     // return user != "";
     return user == "1";
 }
@@ -36,8 +22,11 @@ function login() {
     }
     else {
         if (username.trim() == "admin" && (password.trim() == "group2")) {
-            setCookie("grp2Login", "1", 1);
-            var chk = checkCookie("grp2Login")
+            setLoginId("grp2Login");
+            var chk = checkLogin("grp2Login")
+            var e = getLoginId("grp2Login");
+            s.innerHTML = "";
+            // alert(chk);
             if (chk) {
                 window.location.href = "list.html";
             }
@@ -53,6 +42,6 @@ function login() {
 }
 
 function logout() {
-    setCookie("grp2Login", "", 1);
+    localStorage.setItem("grp2Login", "");
     window.location.href = "index.html";
 }
